@@ -10,12 +10,14 @@
 
 <body>
 <h3 id="texto"></h3>
+<button onclick="captaVoz()">Captar voz</button>
+
 
 
 <script>
 
     function captaVoz(){
-        const recognition = new SpeechRecognition();
+        const recognition = new webkitSpeechRecognition();
         recognition.interimResults = true; //Mostrar resultados inteiros, se colocar falso ele retorna palavra por palavra
         recognition.lang = "pt-BR"; //linguagem dele
         recognition.continuous = true; //continua ouvindo sempre
